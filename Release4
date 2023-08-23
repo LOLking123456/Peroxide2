@@ -29,7 +29,16 @@ local main2 = library:CreateWindow("Credits")
 
 
 main1:AddButton({text = "NEW VID OUT", flag = "Discord", callback = function()
-
+local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
+CoreGui:SetCore("SendNotification", {
+	-- Customizable
+	Title = "Discord",
+	Text = "Copied To Clipboard",
+	Duration = 7, -- Set the duration to how much you want this to stay
+	-- More code in part 2
+})
+setclipboard("https://youtu.be/Kze8cs0w0vc")
+toclipboard("https://youtu.be/Kze8cs0w0vc")
 end})
 main2:AddButton({text = "Join Discord", flag = "Discord", callback = function()
 local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
