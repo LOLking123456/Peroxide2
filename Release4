@@ -1,20 +1,51 @@
-        local Library =
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-        local Window = Library.CreateLib("NEW VIDEO OUT FOR UPDATED PEROXIDE GUI", "Ocean")
 
-        -- MAIN
-        local Main = Window:NewTab("Main")
-        local MainSection = Main:NewSection("Main")
 
-MainSection:NewButton("GET VIDEO LINK", "PASTE LINK TO GOOGLE", function()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if game:GetService("CoreGui"):FindFirstChild("ScreenGui") then
+game:GetService("CoreGui").ScreenGui:Destroy()
+getgenv().Farming1 = false
+end
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/ui12/main/testing23"))()
+local client = game:GetService("Players").LocalPlayer
+local main1 = library:CreateWindow("NEW VID OUT FOR PEROXIDE")
+
+local main2 = library:CreateWindow("Credits")
+
+
+main1:AddButton({text = "NEW VID OUT", flag = "Discord", callback = function()
+
+end})
+main2:AddButton({text = "Join Discord", flag = "Discord", callback = function()
 local CoreGui = game:GetService("StarterGui") -- Variable of StarterGui
-	CoreGui:SetCore("SendNotification", {
-		-- Customizable
-		Title = "Paste To Google",
-		Text = "Copied To Clipboard",
-		Duration = 7, -- Set the duration to how much you want this to stay
-		-- More code in part 2
-	})
-    setclipboard("https://youtu.be/Kze8cs0w0vc")
-	toclipboard("https://youtu.be/Kze8cs0w0vc")
-            end)
+CoreGui:SetCore("SendNotification", {
+	-- Customizable
+	Title = "Discord",
+	Text = "Copied To Clipboard",
+	Duration = 7, -- Set the duration to how much you want this to stay
+	-- More code in part 2
+})
+setclipboard("https://discord.gg/dtQKPPCyfK")
+toclipboard("https://discord.gg/dtQKPPCyfK")
+end})
+
+
+main2:AddLabel({text = "Made By Legend HandlesYT", flag = "Made By Legend HandlesYT", callback = function()
+    
+end})
+library:Init()
